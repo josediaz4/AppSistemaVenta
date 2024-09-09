@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { environment } from '../../environments/environment.development';
+import { appsettings } from '../Settings/appsettings';
 import { ResponseApi } from '../Inferfaces/response-api';
 import { Producto } from '../Inferfaces/producto';
 
@@ -11,7 +11,7 @@ import { Producto } from '../Inferfaces/producto';
 })
 export class ProductoService {
 
-  private urlApi:string = environment.endpoint + "Producto/"
+  private urlApi:string = appsettings.apiUrl + "Producto/"
 
   constructor(private http:HttpClient) { }
 

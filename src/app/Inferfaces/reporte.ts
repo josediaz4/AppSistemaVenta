@@ -1,11 +1,11 @@
 export interface Reporte {
-    numeroDocumento:string,
-    tipoPago:string,
-    fechaRegistro:string,
+    NumeroDocumento:string,
+    TipoPago:string,
+    FechaRegistro:string,
 
-    totalVenta:string,
-    producto:string,
-    cantidad:number,
-    precio:string,
-    total:string
+    TotalVenta:string,
+    Producto:string,
+    Cantidad:number,
+    Precio:string,
+    Total:string
 }

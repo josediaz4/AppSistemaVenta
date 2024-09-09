@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { environment } from '../../environments/environment.development';
+import { appsettings } from '../Settings/appsettings';
 import { ResponseApi } from '../Inferfaces/response-api';
 import { Venta } from '../Inferfaces/venta';
 
@@ -11,7 +11,7 @@ import { Venta } from '../Inferfaces/venta';
 })
 export class VentaService {
 
-  private urlApi:string = environment.endpoint + "Venta/"
+  private urlApi:string = appsettings.apiUrl + "Venta/"
 
   constructor(private http:HttpClient) { }
 

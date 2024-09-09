@@ -1,9 +1,9 @@
 export interface Producto {
-    idProducto:number,
-    nombre:string,
-    idCategoria:number,
-    descripcionCategoria:string,
-    stock:number,
-    precio:string,
-    esActivo:number
+    IdProducto:number,
+    Nombre:string,
+    IdCategoria:number,
+    DescripcionCategoria:string,
+    Stock:number,
+    Precio:string,
+    EsActivo:number
 }

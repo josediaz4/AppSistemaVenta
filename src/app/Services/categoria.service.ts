@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { environment } from '../../environments/environment.development';
+import { appsettings } from '../Settings/appsettings';
 import { ResponseApi } from '../Inferfaces/response-api';
 
 @Injectable({
@@ -10,7 +10,7 @@ import { ResponseApi } from '../Inferfaces/response-api';
 })
 export class CategoriaService {
 
-  private urlApi:string = environment.endpoint + "Categoria/"
+  private urlApi:string = appsettings.apiUrl + "Categoria/"
 
   constructor(private http:HttpClient) { }
 

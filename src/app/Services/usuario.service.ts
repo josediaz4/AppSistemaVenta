@@ -1,8 +1,8 @@
-import { Injectable } from '@angular/core';
+import { inject, Injectable } from '@angular/core';
 
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { environment } from '../../environments/environment.development';
+import { appsettings } from '../Settings/appsettings';
 import { ResponseApi } from '../Inferfaces/response-api';
 import { Login } from '../Inferfaces/login';
 import { Usuario } from '../Inferfaces/usuario';
@@ -12,9 +12,10 @@ import { Usuario } from '../Inferfaces/usuario';
 })
 export class UsuarioService {
 
-  private urlApi:string = environment.endpoint + "Usuario/"
+  private http = inject(HttpClient)
+  private urlApi:string = appsettings.apiUrl + "Usuario/"
 
-  constructor(private http:HttpClient) { }
+  constructor() { }
 
   iniciarSesion(request:Login):Observable<ResponseApi>{
     return this.http.post<ResponseApi>(`${this.urlApi}IniciarSesion`, request)
